@@ -8,6 +8,12 @@ const port = 3000;
 //import route
 const route = require('./routes/index.js');
 
+//import Database
+const db = require('./config/db/index');
+
+//DB connect
+db.Connect();
+
 // static file => folder public
 app.use(express.static(path.join(__dirname, 'public')));
 
