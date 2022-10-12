@@ -1,11 +1,24 @@
-<html lang='en'>
-    <head>
-        <meta charset='UTF-8' />
-        <meta http-equiv='X-UA-Compatible' content='IE=edge' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <title>Home</title>
-    </head>
-    <body>
-        <h2>HOME</h2>
-    </body>
-</html>
+<div class="mt-4">
+    <div class="row">
+        <!--Lặp các Div theo mỗi docuemnt trong DB-->
+        
+        {{#each products}}
+        <div class="col-sm-6 col-lg-3 p-2">
+            <div class="card fix-card rounded-5" style="width: 18rem;">
+                <a href="products/{{this.slug}}">
+                    <img src="{{this.image}}" class="card-img-top fix-image" alt="{{this.name}}">
+                </a>
+                
+                <div class="card-body">
+                    <hr>
+                    <a href="products/{{this.slug}}">
+                        <h5 class="card-title">{{this.description}}</h5>
+                    </a>
+                    <a href="#" class="btn btn-primary">Buy</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
