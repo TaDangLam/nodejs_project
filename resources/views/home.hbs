@@ -5,13 +5,13 @@
         {{#each products}}
         <div class="col-sm-6 col-lg-3 p-2">
             <div class="card fix-card rounded-5" style="width: 18rem;">
-                <a href="products/{{this.slug}}">
+                <a href="products/{{this.target}}">
                     <img src="{{this.image}}" class="card-img-top fix-image" alt="{{this.name}}">
                 </a>
                 
                 <div class="card-body">
                     <hr>
-                    <a href="products/{{this.slug}}">
+                    <a href="products/{{this.target}}">
                         <h5 class="card-title">{{this.description}}</h5>
                     </a>
                     <a href="#" class="btn btn-primary">Buy</a>
